@@ -1,1 +1,11 @@
+# mac
 .DS_Store
+
+# cpp
+main.dSYM
+.vscode
+main
+
+# rust 
+target
+Cargo.lock
