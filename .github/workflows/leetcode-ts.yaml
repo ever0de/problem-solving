@@ -1,0 +1,39 @@
+name: leetcode-ts
+
+on:
+  pull_request:
+    paths-ignore:
+      - "**.md"
+    branches:
+      - "master"
+  push:
+    branches:
+      - "master"
+
+jobs:
+  ps-tests:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2.1.0
+        with:
+          version: 7.1.5
+          run_install: false
+
+      - name: Setup node 16
+        uses: actions/setup-node@v2
+        with:
+          node-version: "16"
+
+      - name: Install dependencies
+        run: cd leetcode && pnpm install
+
+      - name: Test leetcode-ts
+        run: cd leetcode && pnpm test
