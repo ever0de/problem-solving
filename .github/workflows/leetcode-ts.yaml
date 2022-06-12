@@ -31,7 +31,6 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: "16"
-          cache: "pnpm"
 
       - name: Install dependencies
         run: cd leetcode && pnpm install
