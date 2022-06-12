@@ -9,3 +9,6 @@ main
 # rust 
 target
 Cargo.lock
+
+# typescript
+node_modules
