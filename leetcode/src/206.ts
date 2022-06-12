@@ -1,7 +1,7 @@
 /**
  * Definition for singly-linked list.
  */
-class ListNode {
+export class ListNode {
     public readonly val: number;
     public next: ListNode | null;
 
@@ -31,7 +31,7 @@ class ListNode {
 }
 
 /**
- * Solution
+ * Given the head of a singly linked list, reverse the list, and return the reversed list.
  */
 function reverseList(head: ListNode | null): ListNode | null {
     let prev: ListNode | null = null;
