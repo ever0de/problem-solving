@@ -1,7 +1,9 @@
+export {};
+
 /**
  * Definition for singly-linked list.
  */
-export class ListNode {
+class ListNode {
     public readonly val: number;
     public next: ListNode | null;
 
