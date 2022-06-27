@@ -13,8 +13,7 @@ function distributeCandies(candies: number, num_people: number): number[] {
     let i: number = 0;
     while (candies > 0) {
         i = i % num_people;
-        if (candies < candy) result[i] += candies;
-        else result[i] += candy;
+        result[i] += candies < candy ? candies : candy;
 
         i++;
         candies -= candy;
