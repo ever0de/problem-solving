@@ -10,5 +10,5 @@ main
 target
 Cargo.lock
 
-# typescript
+# node
 node_modules
